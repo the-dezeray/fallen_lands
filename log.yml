@@ -1,0 +1,31 @@
+start:
+  text: "hi how are you"
+  choices:
+    - text: "i am okay"
+      next_node: explore
+    - text: "no i am not okay"
+      next_node: re
+
+chapter1:
+  dialogue:
+    start:
+        text: "hi how are you"
+        choices:
+          - text: "i am okay"
+            next_node: explore
+            function:
+              name : none
+              arguments: None
+          - text: "no i am not okay"
+            next_node: chapter2
+    chapter2:
+    text: "where are you going" 
+
+chapter2:
+  dialogue:
+    start:
+        text: "you met a snake"
+        choices:
+          - text: fight
+            next_node: none
+            function: 'fight(name = "snake",lvl = 3)'
