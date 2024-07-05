@@ -1,0 +1,18 @@
+
+- name: knife
+  type: weapon
+  effect: null
+  dmg: 10
+  condition: 10
+
+- name: sword
+  type: weapon
+  effect: null
+  dmg: 15
+  condition: 20
+
+- name: shield
+  type: weapon
+  effect: null
+  dmg: -2
+  condition: 20
