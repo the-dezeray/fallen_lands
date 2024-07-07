@@ -5,6 +5,11 @@ class Player():
         self.entity = None
         from inventory import Inventory
         self.inv = Inventory()
+        self.strength = 0
+        self.agility = 0
+        self.defence = 0
+        self.luck = 0
+        self.vitality = 0
         self.weapon = None
 
     def deal_dmg(self,weapon):

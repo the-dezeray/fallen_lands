@@ -9,15 +9,20 @@ class App(ctk.CTk):
         super().__init__()
         self.title = "title"
         self.geometry("1280x720")
-        from left_frame import LeftFrame
-        from right_frame import RightFrame
-        from center_frame import CenterFrame
+        from .left_frame import LeftFrame
+        from .right_frame import RightFrame
+        from .center_frame import CenterFrame
 
         self.left_frame = LeftFrame(master = self)
         self.center_frame = CenterFrame(master = self)
         self.right_frame= RightFrame(master=self)
+def something():
+    print("i work")
+
 def main():
     app = App()
     app.mainloop()
+def render_game():
+    main()  
 if __name__ == "main":    
     main()

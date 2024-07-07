@@ -39,9 +39,9 @@ class EntityCollection(Collection):
 from pathlib import Path
 
 # Define the relative path to the file
-story_file_path = Path(__file__).parent / "story_content" / "dialogues.yml"
-item_file_path = Path(__file__).parent / "story_content" / "items.yml"
-entity_file_path = Path(__file__).parent / "story_content" / "entities.yml"
+story_file_path = Path(__file__).parent / "content" / "dialogues.yml"
+item_file_path = Path(__file__).parent / "content" / "items.yml"
+entity_file_path = Path(__file__).parent / "content" / "entities.yml"
 
 STORY_DICT = load_story_from_yaml(story_file_path)
 ITEM_COLLECTION = Collection(item_file_path,Item)

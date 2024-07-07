@@ -1,7 +1,7 @@
 from player import Player
 from _functions import Fight,get_user_input
 from data_loader import ENTITY_COLLECTION,ITEM_COLLECTION,STORY_DICT
-
+from gui.main_loop import render_game
 import yaml
 
 class Dialogue():
@@ -17,6 +17,7 @@ player = Player()
 player.inv.add(ITEM_COLLECTION.get("knife"))
 player.inv.add(ITEM_COLLECTION.get("sword"))
 
+render_game()
 while True:
     current_chapter = main_story_dict[chapter_name]
     print("\n ------------------------------------")

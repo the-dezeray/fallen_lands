@@ -6,7 +6,7 @@ class MiniPlayerStatusBar(ctk.CTkFrame):
         
         master = master,
         width=250,
-        fg_color="transparent",
+        
         height=80,)
 
         
