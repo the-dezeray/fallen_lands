@@ -1,7 +1,7 @@
 import yaml
 
-from entity import Entity
-from item import Item
+from .entity import Entity
+from .item import Item
 
 from typing import Type
 def load_instances_from_yaml(file_path,instance_class):
@@ -39,9 +39,9 @@ class EntityCollection(Collection):
 from pathlib import Path
 
 # Define the relative path to the file
-story_file_path = Path(__file__).parent / "content" / "dialogues.yml"
-item_file_path = Path(__file__).parent / "content" / "items.yml"
-entity_file_path = Path(__file__).parent / "content" / "entities.yml"
+story_file_path = Path(__file__).parent.parent / "content" / "dialogues.yml"
+item_file_path = Path(__file__).parent.parent / "content" / "items.yml"
+entity_file_path = Path(__file__).parent.parent / "content" / "entities.yml"
 
 STORY_DICT = load_story_from_yaml(story_file_path)
 ITEM_COLLECTION = Collection(item_file_path,Item)

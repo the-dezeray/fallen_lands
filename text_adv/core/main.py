@@ -1,7 +1,7 @@
-from player import Player
-from _functions import Fight,get_user_input
-from data_loader import ENTITY_COLLECTION,ITEM_COLLECTION,STORY_DICT
-from gui.main_loop import render_game
+from core.player import Player
+from core._functions import Fight,get_user_input
+from core.data_loader import ENTITY_COLLECTION,ITEM_COLLECTION,STORY_DICT
+
 import yaml
 
 class Dialogue():
@@ -16,10 +16,14 @@ player = Player()
 
 player.inv.add(ITEM_COLLECTION.get("knife"))
 player.inv.add(ITEM_COLLECTION.get("sword"))
-
-render_game()
-while True:
+def start_core(gui):
+    gui.display_simple_message()
+def load_game():
+    pass
+print("this works")
+"""while True:
     current_chapter = main_story_dict[chapter_name]
+
     print("\n ------------------------------------")
     print(f"LOCATION - {current_chapter["location"]} \n")
     print(f"{current_chapter["text"]}")
@@ -35,6 +39,5 @@ while True:
     if function_string != None:
         exec(function_string)
     chapter_name = choices[inputs]["next_node"]
-if __name__ == "main":
-    main()
-    
+
+    """

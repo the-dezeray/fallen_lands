@@ -1,9 +1,11 @@
+from core.inventory import Inventory
+
 class Player():
     def __init__(self) -> None:
         self.hp :float = 10.0
         self.dmg = 1
         self.entity = None
-        from inventory import Inventory
+
         self.inv = Inventory()
         self.strength = 0
         self.agility = 0
